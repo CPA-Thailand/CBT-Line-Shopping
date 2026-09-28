@@ -200,7 +200,7 @@ function review(){
     <dt>เบอร์โทรศัพท์</dt><dd>${esc(d.phone)}</dd>
     <dt>อีเมล</dt><dd>${esc(d.email)}</dd>
     <dt>ความประสงค์</dt><dd>${d.option==="refund"?"ยกเลิกและขอ Refund ค่าสอบคืน":"เลื่อนรอบสอบ"}</dd>
-    ${d.option==="refund"?`<dt>ธนาคาร</dt><dd>${esc(d.bank)}</dd><dt>เลขบัญชี</dt><dd>${esc(d.acct)}</dd>`:`<dt>วันสอบใหม่</dt><dd>${dt?dt.t+" เวลา 17.00 น.":""}</dd>`}
+    ${d.option==="refund"?`<dt>ธนาคาร</dt><dd>${esc(d.bank)}</dd><dt>เลขบัญชี</dt><dd>${esc(d.acct)}</dd>`:`<dt>วันสอบใหม่</dt><dd>${dt?dt.t+" ":""}</dd>`}
   </dl><div id="e_sub"></div>`+nav("ยืนยันและส่งข้อมูล");
   $("#next").onclick=async()=>{
     const b=$("#next");b.disabled=true;b.textContent="กำลังส่งข้อมูล...";
