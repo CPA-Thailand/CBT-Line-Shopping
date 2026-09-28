@@ -75,7 +75,7 @@ footer{background:#2B2B2B;padding:18px 32px;text-align:center;font-size:11px;col
   <div class="hr"><img src="https://perpignan.alfmed.com/wp-content/uploads/2025/03/TOEIC-logo-green.png" alt="TOEIC" onerror="this.style.display='none'"></div>
 </header>
 <div class="band">
-  <h1>แบบฟอร์มแจ้งความประสงค์ยกเลิกสอบ หรือเลื่อนรอบสอบ สำหรับผู้สอบที่จองสอบ TOEIC Listening & Reading Computer- Based Testing ในวันเสาร์ที่ 26 กันยายน 2569 ทาง CPA LINE SHOPPING</h1>
+  <h1>แบบฟอร์มแจ้งความประสงค์ยกเลิกสอบ หรือเลื่อนรอบสอบสำหรับผู้สอบที่จองสอบ TOEIC Listening & Reading Computer- Based Testing ทาง CPA LINE SHOPPING</h1>
 </div>
 <div class="main"><div class="card"><div class="steps" id="bar"></div><div id="view"></div></div></div>
 <footer>&copy; 2026 Center for Professional Assessment (Thailand). All rights reserved.<br>ETS, TOEIC are registered trademarks of ETS, used under license in Thailand.</footer>
@@ -85,9 +85,9 @@ footer{background:#2B2B2B;padding:18px 32px;text-align:center;font-size:11px;col
 const API_URL = "https://script.google.com/macros/s/AKfycbycYWgDQ2Cr2enOgxn_pB4zduaQfWh3T0cm6hSdzgUCw8WfrG70WVTxudx3j62aZ2tP/exec";
 
 const DATES = [
-  {v:"2026-09-28", t:"วันจันทร์ที่ 28 กันยายน 2569", en:"Mon 28 Sep"},
-  {v:"2026-09-29", t:"วันอังคารที่ 29 กันยายน 2569", en:"Tue 29 Sep"},
-  {v:"2026-10-03", t:"วันเสาร์ที่ 3 ตุลาคม 2569", en:"Sat 3 Oct"}
+  {v:"2026-09-28", t:"วันจันทร์ที่ 28 กันยายน 2569 / รอบเวลา 17.00 น.", en:"Mon 28 Sep"},
+  {v:"2026-09-29", t:"วันอังคารที่ 29 กันยายน 2569 / รอบเวลา 17.00 น.", en:"Tue 29 Sep"},
+  {v:"2026-10-03", t:"วันเสาร์ที่ 3 ตุลาคม 2569 / รอบเวลา 17.00 น.", en:"Sat 3 Oct"}
 ];
 const S={step:"info",hist:[],d:{id:"",name:"",phone:"",email:"",option:"",bank:"",acct:"",ack:false,date:""}};
 const $=s=>document.querySelector(s);
@@ -121,7 +121,7 @@ function info(){
   <div class="field"><label class="l" for="id">เลขบัตรประชาชน 13 หลัก <span class="req">*</span></label>
     <input id="id" type="text" inputmode="numeric" maxlength="13" autocomplete="off" value="${esc(d.id)}"><div class="err" id="e_id"></div></div>
   <div class="field"><label class="l" for="name">ชื่อ-นามสกุล (ภาษาอังกฤษเท่านั้น) <span class="req">*</span></label>
-    <input id="name" type="text" autocomplete="name" placeholder="เช่น SOMCHAI JAIDEE" value="${esc(d.name)}"><div class="err" id="e_name"></div></div>
+    <input id="name" type="text" autocomplete="name" placeholder=" " value="${esc(d.name)}"><div class="err" id="e_name"></div></div>
   <div class="field"><label class="l" for="phone">เบอร์โทรศัพท์ 10 หลัก <span class="req">*</span></label>
     <input id="phone" type="tel" inputmode="numeric" maxlength="10" value="${esc(d.phone)}"><div class="err" id="e_phone"></div></div>
   <div class="field"><label class="l" for="email">อีเมล <span class="req">*</span></label>
@@ -147,8 +147,8 @@ function info(){
 function option(){
   const d=S.d;
   $("#view").innerHTML=title("เลือกความประสงค์")+`
-  <label class="opt"><input type="radio" name="o" value="refund" ${d.option==="refund"?"checked":""}><div><b>1. ยกเลิกและขอ Refund</b><span>ดำเนินการคืนเงินภายใน 7 วัน</span></div></label>
-  <label class="opt"><input type="radio" name="o" value="move" ${d.option==="move"?"checked":""}><div><b>2. เลื่อนสอบไปรอบพิเศษ 17.00 น.</b><span>เลือกได้ 3 วัน: จันทร์ 28 ก.ย. / อังคาร 29 ก.ย. / เสาร์ 3 ต.ค.</span></div></label>
+  <label class="opt"><input type="radio" name="o" value="refund" ${d.option==="refund"?"checked":""}><div><b>1. ยกเลิกและขอ Refund ค่าสอบคืน</b><span>ดำเนินการคืนเงินภายใน 7 วัน</span></div></label>
+  <label class="opt"><input type="radio" name="o" value="move" ${d.option==="move"?"checked":""}><div><b>2. เลื่อนรอบสอบ</b><span>เฉพาะรอบสอบพิเศษเวลา 17.00 น.: จันทร์ 28 ก.ย. / อังคาร 29 ก.ย. / เสาร์ 3 ต.ค. เท่านั้น</span></div></label>
   <div class="err" id="e_o"></div>`+nav();
   $("#next").onclick=()=>{
     const c=document.querySelector('input[name=o]:checked');
