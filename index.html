@@ -216,28 +216,7 @@ function done(){
   const d=S.d,dt=DATES.find(x=>x.v===d.date);
   $("#view").innerHTML=`<div class="done"><div class="tick">✓</div>`+(d.option==="refund"
     ?`<p><b>ทางศูนย์ได้รับข้อมูลการขอยกเลิก Refund ของท่านเรียบร้อยแล้ว</b><br>ทางศูนย์สอบจะดำเนินการโอนเงินคืน ภายใน 7 วัน หลังจากได้รับข้อมูล และตรวจสอบอย่างสมบูรณ์แล้ว</p>`
-    :`<p><b>เปลี่ยนแปลงรอบสอบให้ท่านเรียบร้อยแล้ว</b><br>รอบสอบใหม่: ${dt?dt.t:""} เวลา 17.00 น.<br>ระบบส่งอีเมลยืนยันไปที่ ${esc(d.email)} แล้ว</p>`)+`</div>`
-            <div style="margin: 20px 0; text-align: center;">
-          <img src="http://cpathailand.co.th/wp-content/uploads/2026/04/Banner-Website-12-scaled.jpg" style="max-width: 100%; height: auto; border-radius: 8px;">
-        </div>
-
-            <p><strong>หมายเหตุ:</strong></p>
-        <ul style="padding-left: 20px; margin-bottom: 20px;">          
-          <li><strong> กรุณาศึกษาข้อมูลการรายงานตัว และเอกสารที่ต้องเตรียมได้ที่ </strong>
-            <a href="https://cpathailand.co.th/test-reservation/d2-1-1-in-house/#d2-s2" target="_blank" class="text-decoration-none fw-bold">www.cpathailand.co.th</a> </li> 
-          <li>จะต้องรายงานตัวก่อนเวลาสอบล่วงหน้าอย่างน้อย 1 ชั่วโมง โดยจุดลงทะเบียนจะปิดก่อนเวลาสอบ 10 นาที</li>
-          <li>ศูนย์สอบฯ อนุญาตให้เฉพาะผู้สอบเข้ามาติดต่อ ณ สถานที่สอบ ตามเวลารอบสอบที่จองที่นั่งไว้แล้วเท่านั้น</li>
-          <li>CPA (Thailand) ขอสงวนสิทธิ์ในการปฏิเสธการให้เข้าสอบในกรณีที่ผู้สอบแสดงหลักฐานข้างต้นไม่ครบถ้วนสมบูรณ์ตามที่กำหนด</li>
-        </ul>
-
-        <p><strong>☎️ CPA Call Center </strong> 02-260-7061 (จันทร์-เสาร์ 8.00-16.30 น.)</p>
-
-        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 20px;">
-        <p style="margin-bottom: 0;">จึงเรียนมาเพื่อทราบ</p>
-        <p style="margin-top: 5px; color: #7f8c8d;">ฝ่ายประสานงานการจัดสอบ <strong>CPA (Thailand)</strong></p>
-        <img src="${logoUrl}" alt="CPA Logo" style="width: 150px; height: auto; opacity: 0.8; margin-top: 10px;">
-      </div>
-;
+    :`<p><b>เปลี่ยนแปลงรอบสอบให้ท่านเรียบร้อยแล้ว</b><br>รอบสอบใหม่: ${dt?dt.t:""} เวลา 17.00 น.<br>ระบบส่งอีเมลยืนยันไปที่ ${esc(d.email)} แล้ว</p>`)+`</div>`;
 }
 render();
 </script>
