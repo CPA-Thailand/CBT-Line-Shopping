@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>แจ้งยกเลิก Refund / เลื่อนรอบสอบ TOEIC</title>
+<title>แบบฟอร์มแจ้งความประสงค์ยกเลิกสอบ หรือเลื่อนรอบสอบสำหรับผู้สอบที่จองสอบ TOEIC Listening & Reading Computer- Based Testing ในวันเสาร์ที่ 26 กันยายน 2569 ทาง CPA LINE SHOPPING</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#14303a;--muted:#5d727a;--line:#d5dfe2;--bg:#f3f6f6;--card:#fff;--acc:#0e7c86;--acc2:#0a5c64;--warn:#b3261e;--ok:#1b7f4b;--soft:#e4f1f2}
@@ -38,7 +38,7 @@ dl{margin:0}dt{color:var(--muted);font-size:.85rem;margin-top:10px}dd{margin:0;f
 </head>
 <body>
 <main>
-<h1>แจ้งยกเลิก Refund / เลื่อนรอบสอบ TOEIC</h1>
+<h1>แบบฟอร์มแจ้งความประสงค์ยกเลิกสอบ หรือเลื่อนรอบสอบสำหรับผู้สอบที่จองสอบ TOEIC Listening & Reading Computer- Based Testing ในวันเสาร์ที่ 26 กันยายน 2569 ทาง CPA LINE SHOPPING</h1>
 <p class="sub">ศูนย์สอบ CPA Thailand</p>
 <div class="card"><div class="bar" id="bar"></div><div id="view"></div></div>
 </main>
@@ -79,7 +79,6 @@ function render(){
 function info(){
   const d=S.d;
   $("#view").innerHTML = `
-  <div class="note">กรอกได้คนละ 1 ครั้งเท่านั้น ระบบตรวจซ้ำจากเลขบัตรประชาชน</div>
   <label for="id">เลขบัตรประชาชน 13 หลัก *</label>
   <input id="id" type="text" inputmode="numeric" maxlength="13" autocomplete="off" value="${esc(d.id)}">
   <p class="err" id="e_id"></p>
