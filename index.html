@@ -153,7 +153,10 @@ function detail(){
     };
   } else {
     $("#view").innerHTML = `
-    <div class="note">รอบสอบที่เลื่อนแบบ Computer Based Testing ได้ มีเฉพาะรอบพิเศษ 17.00 น. ใน 3 วันด้านล่างเท่านั้น หากต้องการสอบรอบอื่น หรือเปลี่ยนเป็น Paper Based Testing ให้ยกเลิกและจองสอบใหม่</div>
+    <div class="note">สำหรับผู้ที่ต้องการเลื่อนรอบสอบ TOEIC Listening & Reading Computer- Based Testing CPA (Thailand) ได้ทำการเปิดสอบรอบพิเศษโดยกำหนดวันและเวลาสอบ ดังนี้ 
+รอบสอบเวลา 17.00 น. ของวันจันทร์ที่ 28 กันยายน วันอังคารที่ 29 กันยายน และวันเสาร์ที่ 3 ตุลาคม 2569
+
+กรณีผู้ที่ไม่สะดวกเลื่อนสอบตามวันและเวลาดังกล่าว ขอให้ผู้สอบทำการยกเลิก Refund ค่าสอบคืน และทำการจองสอบรอบใหม่ทาง CPA LINE SHOPPING หรือ CPA Call Center</div>
     <p style="margin:0 0 4px;font-weight:500">เลือกวันสอบ (รอบ 17.00 น.) *</p>
     ${DATES.map(x=>`<label class="opt"><input type="radio" name="dt" value="${x.v}" ${d.date===x.v?"checked":""}><div><b>${x.t}</b><span>${x.en} · 5 pm</span></div></label>`).join("")}
     <p class="err" id="e_dt"></p>
