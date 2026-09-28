@@ -194,12 +194,12 @@ function detail(){
 
 function review(){
   const d=S.d,dt=DATES.find(x=>x.v===d.date);
-  $("#view").innerHTML=title("ตรวจสอบข้อมูลก่อนส่ง")+`<dl>
+  $("#view").innerHTML=title("ตรวจสอบข้อมูล")+`<dl>
     <dt>เลขบัตรประชาชน</dt><dd>${esc(d.id)}</dd>
     <dt>ชื่อ-นามสกุล</dt><dd>${esc(d.name)}</dd>
     <dt>เบอร์โทรศัพท์</dt><dd>${esc(d.phone)}</dd>
     <dt>อีเมล</dt><dd>${esc(d.email)}</dd>
-    <dt>สิ่งที่ต้องการ</dt><dd>${d.option==="refund"?"ยกเลิกและขอ Refund":"เลื่อนสอบไปรอบพิเศษ 17.00 น."}</dd>
+    <dt>ความประสงค์</dt><dd>${d.option==="refund"?"ยกเลิกและขอ Refund ค่าสอบคืน":"เลื่อนรอบสอบ"}</dd>
     ${d.option==="refund"?`<dt>ธนาคาร</dt><dd>${esc(d.bank)}</dd><dt>เลขบัญชี</dt><dd>${esc(d.acct)}</dd>`:`<dt>วันสอบใหม่</dt><dd>${dt?dt.t+" เวลา 17.00 น.":""}</dd>`}
   </dl><div id="e_sub"></div>`+nav("ยืนยันและส่งข้อมูล");
   $("#next").onclick=async()=>{
@@ -215,7 +215,7 @@ function review(){
 function done(){
   const d=S.d,dt=DATES.find(x=>x.v===d.date);
   $("#view").innerHTML=`<div class="done"><div class="tick">✓</div>`+(d.option==="refund"
-    ?`<p><b>ทางศูนย์ได้รับข้อมูลการขอยกเลิก Refund ของท่านเรียบร้อยแล้ว</b><br>ทางศูนย์สอบจะดำเนินการโอนเงินคืน ภายใน 7 วัน หลังจากได้รับข้อมูล และตรวจสอบอย่างสมบูรณ์แล้ว</p>`
+    ?`<p><b>ทางศูนย์ได้รับข้อมูลการขอยกเลิก Refund ค่าสอบคืนของท่านเรียบร้อยแล้ว</b><br>ทางศูนย์สอบจะดำเนินการโอนเงินคืนผ่านบัญชีธนาคารตามที่ท่านได้ระบุไว้ ภายใน 7 วัน หลังจากได้รับข้อมูล และตรวจสอบอย่างสมบูรณ์แล้ว</p>`
     :`<p><b>เปลี่ยนแปลงรอบสอบให้ท่านเรียบร้อยแล้ว</b><br>รอบสอบใหม่: ${dt?dt.t:""} เวลา 17.00 น.<br>ระบบส่งอีเมลยืนยันไปที่ ${esc(d.email)} แล้ว</p>`)+`</div>`;
 }
 render();
