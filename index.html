@@ -147,7 +147,7 @@ function info(){
 function option(){
   const d=S.d;
   $("#view").innerHTML=title("เลือกความประสงค์")+`
-  <label class="opt"><input type="radio" name="o" value="refund" ${d.option==="refund"?"checked":""}><div><b>1. ยกเลิกและขอ Refund ค่าสอบคืน</b><span>ดำเนินการคืนเงินภายใน 7 วัน</span></div></label>
+  <label class="opt"><input type="radio" name="o" value="refund" ${d.option==="refund"?"checked":""}><div><b>1. ยกเลิกและขอ Refund ค่าสอบคืน (แจ้งความประสงค์ภายในวันที่ 30 กันยายน 2569 ก่อนเวลา 16.30 น.)</b><span>ดำเนินการคืนเงินภายใน 7 วัน</span></div></label>
   <label class="opt"><input type="radio" name="o" value="move" ${d.option==="move"?"checked":""}><div><b>2. เลื่อนรอบสอบ</b><span>เฉพาะรอบสอบพิเศษเวลา 17.00 น.: จันทร์ 28 ก.ย. / อังคาร 29 ก.ย. / เสาร์ 3 ต.ค. เท่านั้น</span></div></label>
   <div class="err" id="e_o"></div>`+nav();
   $("#next").onclick=()=>{
